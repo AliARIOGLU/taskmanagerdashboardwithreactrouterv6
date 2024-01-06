@@ -12,6 +12,10 @@ export const Logo = styled(Link)`
   border: 1px solid var(--border-color);
   padding: var(--space-m);
   border-radius: var(--border-radius-m);
+  transition: all 300ms;
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 export const Text = styled.p`

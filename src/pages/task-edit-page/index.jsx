@@ -15,13 +15,13 @@ export const updateTaskAction = async ({ request, params }) => {
 
   const name = formData.get("task-name");
   const description = formData.get("task-description");
-  const completed = formData.get("task-completed");
+  const completedStatus = formData.get("task-completed");
 
   const task = {
     id: params.id,
     name,
     description,
-    completed,
+    completed: completedStatus ? true : false,
   };
 
   await updateTask(task);

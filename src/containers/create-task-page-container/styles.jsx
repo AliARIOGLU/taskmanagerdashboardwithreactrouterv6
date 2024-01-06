@@ -17,4 +17,10 @@ export const CreateTaskPageContainer = styled.section`
     outline: none;
     resize: none;
   }
+
+  button[type="submit"] {
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
 `;

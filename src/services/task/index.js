@@ -17,6 +17,12 @@ export const addTask = async (task) => {
   return waitFor(task);
 };
 
+export const getTask = async (id) => {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const task = tasks.find((task) => task.id === id);
+  return waitFor(task);
+};
+
 export const deleteTask = async (id) => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   const newTasks = tasks.filter((task) => task.id !== id);
@@ -32,15 +38,9 @@ export const completeTask = async (id) => {
   return waitFor(task);
 };
 
-export const getTask = async (id) => {
-  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-  const task = tasks.find((task) => task.id === id);
-  return waitFor(task);
-};
-
 export const updateTask = async (task) => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-  const index = tasks.findIndex((storedTask) => storedTask.id === task.id);
+  const index = tasks.findIndex((storedTasks) => storedTasks.id === task.id);
   tasks[index] = task;
   localStorage.setItem("tasks", JSON.stringify(tasks));
   return waitFor(task);

@@ -8,7 +8,6 @@ import { deleteTask } from "../../services/task";
 function TaskDetailPageContainer() {
   const task = useLoaderData();
   const fetcher = useFetcher();
-
   const navigate = useNavigate();
 
   const [isSubmitting, setSubmitting] = useState(false);
@@ -42,7 +41,7 @@ function TaskDetailPageContainer() {
               onChange={updateCompleted}
               defaultChecked={task.completed}
             />
-            {task.completed ? "Completed" : "Not completed"}
+            {task.completed ? "Completed" : "Not Completed"}
             {isSubmitting && <Loading />}
           </S.Status>
         </fetcher.Form>

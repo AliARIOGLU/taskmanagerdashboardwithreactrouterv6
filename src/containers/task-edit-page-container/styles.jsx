@@ -15,11 +15,17 @@ export const EditTaskForm = styled(Form)`
     color: var(--white);
     padding: var(--space-m);
     outline: none;
+    resize: none;
   }
 `;
 
 export const Title = styled.h2`
   font-size: var(--font-xl);
+
+  b {
+    font-weight: bolder;
+    color: wheat;
+  }
 `;
 
 export const BackButton = styled(Link)`

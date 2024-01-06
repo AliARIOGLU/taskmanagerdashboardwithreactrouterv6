@@ -25,7 +25,8 @@ export const Task = styled(Link)`
   border-radius: var(--border-radius-s);
 
   border-left: 5px solid
-    ${({ isCompleted }) => (isCompleted ? "var(--green)" : "var(--red)")};
+    ${({ iscompleted }) =>
+      iscompleted === "true" ? "var(--green)" : "var(--red)"};
 `;
 
 export const TaskName = styled.h2``;

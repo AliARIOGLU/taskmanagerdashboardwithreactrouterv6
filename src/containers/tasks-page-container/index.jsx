@@ -17,7 +17,10 @@ function TasksPageContainer() {
           <S.TasksList>
             {tasks.map((task) => (
               <S.TaskListItem key={task.id}>
-                <S.Task to={`/tasks/${task.id}`} isCompleted={task.completed}>
+                <S.Task
+                  to={`/tasks/${task.id}`}
+                  iscompleted={`${task.completed}`}
+                >
                   <S.TaskCompleted>
                     {task.completed ? "Completed" : "Not completed"}
                   </S.TaskCompleted>

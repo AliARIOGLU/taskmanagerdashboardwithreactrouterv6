@@ -19,6 +19,7 @@ import {
 } from "../pages/task-edit-page";
 import { NotFoundPage } from "../pages/not-found-page";
 import { ErrorPage } from "../pages/error-page";
+import { ProjectsPage, projectsPageLoader } from "../pages/projects-page";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
             element: <TaskEditPage />,
             loader: taskEditPageLoader,
             action: updateTaskAction,
+          },
+          {
+            path: "/projects",
+            element: <ProjectsPage />,
+            loader: projectsPageLoader,
           },
           {
             path: "/*",

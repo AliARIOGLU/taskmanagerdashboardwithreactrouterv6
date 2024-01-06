@@ -21,7 +21,7 @@ function TaskEditPageContainer() {
             name="task-completed"
             defaultChecked={task.completed}
           />
-          Completed
+          {task.completed ? "uncomplete" : "complete"}
         </label>
         <button type="submit">Change</button>
       </S.EditTaskForm>
